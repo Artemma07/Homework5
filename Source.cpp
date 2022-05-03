@@ -9,11 +9,11 @@ int** Create(size_t rows, size_t columns) {
 
 void FillRandomNumbers(int** M, const size_t rows, const size_t columns)
 {
-    srand((unsigned int)time(0)); // инициализируем ПГСЧ
+    srand((unsigned int)time(0)); // generator of random numbers, random numberss aren't repeated
 
     for (size_t row = 0; row < rows; row++)
         for (size_t column = 0; column < columns; column++)
-            M[row][column] = rand() % 40 + 10; // присваиваем СЧ
+            M[row][column] = rand() % 40 + 10; // create random numbers 
 }
 void Print(int** M, size_t rows, size_t columns) {
     for (size_t i = 0; i < rows; ++i) {
